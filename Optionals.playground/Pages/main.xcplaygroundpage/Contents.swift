@@ -14,7 +14,7 @@
  */
 var pet = "turtle 🐢"
 
-
+// String
 
 
 
@@ -24,7 +24,7 @@ var pet = "turtle 🐢"
  */
 var petName: String?
 
-
+// It is a String? aka an optional
 
 
 
@@ -32,6 +32,8 @@ var petName: String?
 /*: question3
  ### 3. Currently, what is the _value_ of `petName`?
  */
+
+// nil
 
 
 
@@ -44,8 +46,8 @@ var petName: String?
  */
 // write your code here
 
-
-
+petName = "Sparky"
+// It is a String? aka optional
 
 
 
@@ -55,7 +57,9 @@ var petName: String?
  */
 // write your code here
 
+print(petName)
 
+// I expect to see "Optional("Sparky") because it has not been unwrapped
 
 
 
@@ -66,8 +70,13 @@ var petName: String?
  */
 // write your code here
 
+if petName != nil {
+    print(petName)
+} else {
+    print("There is no pet name")
+}
 
-
+//I expect to see optional("Sparky")
 
 
 
@@ -77,7 +86,11 @@ var petName: String?
  */
 // write your code here
 
-
+if let petName = petName {
+    print(petName)
+} else {
+    print("There is no pet name")
+}
 
 
 
@@ -89,7 +102,11 @@ var petName: String?
 var anotherPetName: String?
 // write your code here
 
-
+if let anotherPetName = anotherPetName {
+    print(anotherPetName)
+} else {
+    print("The value of anotherPetName is nil")
+}
 
 
 
@@ -100,8 +117,13 @@ var anotherPetName: String?
  */
 // write your code here
 
+//if let anotherAnotherPetName != anotherPetName {
+//    print("anotherPetName has no value")
+//} else {
+//    print(anotherAnotherPetName)
+//}
 
-
+// I expecet an error because there needs to be an initializer in optional binding
 
 
 
@@ -114,21 +136,24 @@ var anotherPetName: String?
 // write your code here
 
 
+let thisWontWork: String?
 
 
+thisWontWork = "String"
 
+print(thisWontWork)
 
-
-
+// The value is allowed to be assigned
 
 /*: question11
  ### 11. Declare another _constant_ optional string, and set it to `nil` immediately. Then, on the next line, assign a string value to it. What happens?
  */
 // write your code here
+//
+//let thisIsNil: String? = nil
+//thisIsNil = "TesT"
 
-
-
-
+// This throws an error, as it is already defined explicitly as nil
 
 
 
