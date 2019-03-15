@@ -55,7 +55,7 @@ petName = "foo"
  */
 // write your code here
 
-print("\(petName)")
+print("\(petName!)")
 
 
 
@@ -66,7 +66,7 @@ print("\(petName)")
  */
 // write your code here
 if petName != nil {
-    print("\(petName)")
+    print("\(petName!)")
 } else {
     print("There is no pet name.")
 }
